@@ -9,7 +9,7 @@ pipeline{
 					echo 'Iniciando despliegue'
 				
 				rtMavenDeployer (
-					id: 'HEAP_SORT',
+					id: 'BUBBLE_SORT',
 					serverId: 'artifactory',
 					releaseRepo: 'isp2',
 					snapshotRepo: 'isp2',
@@ -17,7 +17,7 @@ pipeline{
 				rtMavenRun (
 					pom: 'pom.xml',
 					goals: 'install',
-					deployerId: 'HEAP_SORT',
+					deployerId: 'BUBBLE_SORT',
 				)
 					echo 'Finalizando Despliegue'
 				
